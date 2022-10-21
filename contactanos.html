@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="archivo.css">
+
     <title> Formulario de Reserva</title>
     <link rel="icon" href="imagenes/Peachpuff Brush Stroke Photography Logo (9).png" width: 100px>
     <link rel="stylesheet" href="Página home.css">
@@ -14,11 +15,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Acme&family=Carter+One&family=Caveat+Brush&family=Comfortaa:wght@300&family=Concert+One&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
 <header>
+    
     <div class="maquetado_f">
         <div class="flex-containerh">
             <div class="Icono"><img class="logo" src="Logo restaurant def.png" height="140px" ; width="300px"></div>
@@ -28,8 +29,11 @@
             <div class="menu"> <a href="contactanos.html">Contactanos </a></div>
         </div>
 
-        <form class="contacto" action="mostrar_datos.html" target="_blank">
+        <form name="contactanos" class="contacto" action="mostrar_datos.html" target="_blank">
             <h2 class="titulo_c">Contactanos</h2>
+            
+            
+
             <div class="info_c">
                 <label for="Nom_Con">Nombre: </label>
                 <input type="text" name="NombreC" id="Nom_Con">
@@ -39,6 +43,14 @@
 
                 <label for="Email_Con">Email: </label>
                 <input type="email" name="Mail_C" id="Mail_Con">
+                
+                <div class="icons">
+                       <span class="icon1 fas fa-exclamation"></span>
+                       <span class="icon2 fas fa-chack"></span>
+                </div>
+                <div class="texto-error">
+                Introduzca un correo válido
+                </div>
             </div>
 
             <div class="comentario_c">
@@ -66,7 +78,19 @@
 
         </div>
     </div>
+<script>
+function validarEnviar() 
+        {
+//valido el nombre
+if (document.contactanos.nombre.value.length <= 50) {
+            alert("Tiene que escribir su nombre")
+            document.contactanos.nombre.focus()
+            return 0;
+        }
+        
 
+</script>
+    
 </body>
 
 </html>
